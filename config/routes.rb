@@ -7,8 +7,8 @@ Rails.application.routes.draw do
 
   resources :alerts, only: [:index, :create, :update]
 
-  resources :users, only: [] do
-      resources :contacts, only: [:new, :create]
+  resources :users, only: [:show] do
+      resources :contacts, only: [:new, :create, :index]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
