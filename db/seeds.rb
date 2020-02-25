@@ -58,3 +58,27 @@ alert4.save
 
 
 puts 'Finished creating alerts!'
+
+puts 'Creating documents...'
+
+doc1 = Document.new(title: 'La prévention', content: "Le PAV s'engage entend mener au moins une campagne de prévention
+par an sur une thématique visant des publics cibles spécifiques (comme par exemple des auteur·e·s ayant passé à l'acte
+ou étant susceptibles de le faire ou des personnes ayant des facteurs de risque élevés d’être victimes).
+Nous avons également pour objectif de sensibiliser la population en général et de politiser ces thématiques.
+Nos actions de prévention s’insèrent dans une stratégie qui vise à informer et à réduire les risques des personnes
+susceptibles de vivre une situation de violence avec impacts sur la sphère intime mais aussi à sensibiliser la société
+en général. Dans la conception de notre intervention, faire de la prévention à l’intention de potentiel·le·s auteur·e·s,
+de leur entourage et de la société dans son ensemble a pour finalité de mettre l’accent sur la responsabilité individuelle
+et collective de chacun·e et de diminuer l’effet du tabou sur ces questions.", author: 'Association PAV (Pôle Agression et Violence)', url: "https://association-pav.ch/prevention/")
+doc1.save
+
+doc2 = Document.new(title: "Comment j’ai appris à revivre après avoir été victime d’un viol", content:"Suite à l’article que j’ai lu dans ZEP sur une jeune fille violée à l’âge de 13 ans,
+j’ai souhaité réagir. Récemment une de mes amies a été elle aussi violée. Elle n’en a parlé qu’à moi, elle habite à l’autre
+bout du monde. Après une tentative de suicide elle a été prise en charge par un hôpital en Australie, à côté de là où elle habite.
+Tous les jours, nous parlons par Whatsapp, elle a besoin de soutien, elle a besoin que je lui rappelle chaque minute qui passe qu’elle
+n’est pas fautive, qu’elle n’est pas dégoûtante, qu’elle est courageuse, qu’elle ne doit pas détruire son corps, qu’elle est importante
+pour de nombreuses personnes, que personne ne va la juger, qu’elle a encore de belles choses à vivre et surtout, qu’elle va réussir à
+survivre et à retrouver le sourire." , author: "Mélissa A.", url: "https://www.la-zep.fr/intimite/victime-dun-viol-comment-revivre/")
+doc2.save
+
+puts 'Finished creating documents!'
