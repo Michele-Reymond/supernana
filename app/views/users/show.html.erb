@@ -1,11 +1,13 @@
-<h1>Bienvenue sur ton profil <%= @user.first_name %></h1>
+<div class="s-container">
+  <h1>Bienvenue sur ton profil <%= @user.first_name %></h1>
 
-<% if current_user.photo.attached? %>
-  <%= cl_image_tag current_user.photo.key %>
-<% else %>
-  <%= image_tag "profile.png" %>
-<% end %>
-<p><%= @user.first_name %></p>
-<p><%= @user.last_name %></p>
-<p><%= @user.email %></p>
-<p><%= link_to "ajouter un contact", new_user_contact_path(@user) %></p>
+  <% if current_user.photo.attached? %>
+    <%= cl_image_tag current_user.photo.key %>
+  <% else %>
+    <%= image_tag "profile.png" %>
+  <% end %>
+  <p><%= @user.first_name %></p>
+  <p><%= @user.last_name %></p>
+  <p><%= @user.email %></p>
+  <p><%= link_to "ajouter un contact", new_user_contact_path(@user), class: 's-button' %></p>
+</div>
