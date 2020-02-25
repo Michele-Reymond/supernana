@@ -8,4 +8,6 @@
 <p><%= @user.first_name %></p>
 <p><%= @user.last_name %></p>
 <p><%= @user.email %></p>
-<p><%= link_to "ajouter un contact", new_user_contact_path(@user) %></p>
+<p><%= link_to "Ajouter un contact", new_user_contact_path(@user) %></p>
+<p><%= link_to "Alertes du jour", alerts_path  %></p>
+<p><%= link_to "Modifier mon profil", edit_user_registration_path %></p>

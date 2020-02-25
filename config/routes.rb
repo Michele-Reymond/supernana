@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get '/stop', to: 'pages#stop'
 
-  resources :alerts, only: [:index, :create, :update]
+  resources :alerts, only: [:index, :create, :update, :show]
 
   resources :users, only: [:show] do
     resources :contacts, only: [:new, :create]

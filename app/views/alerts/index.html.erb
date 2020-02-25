@@ -1,2 +1,8 @@
-<h1>Alerts#index</h1>
-<p>Find me in app/views/alerts/index.html.erb</p>
+<h3>Les alerts d'aujourd'hui</h3>
+<ol>
+  <% @alerts.each do |alert| %>
+    <li> <%= link_to "Alerte crée par #{alert.user.first_name} #{alert.user.last_name}", alert_path(alert)  %></li>
+  <% end %>
+</ol>
+
+<p><%= link_to "Retour", user_path(current_user) %></p>

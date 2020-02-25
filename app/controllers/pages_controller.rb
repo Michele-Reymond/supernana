@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def stop
+    @alert = current_user.alerts.last
     @contact = current_user.contacts.first
   end
 
