@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/resources/documents', to: 'documents#index', as: :documents
   get '/resources/documents/:id', to: 'documents#show', as: :document
 
-  resources :alerts, only: [:index, :create, :update]
+  resources :alerts, only: [:index, :create, :update, :show]
 
   resources :users, only: [:show] do
     resources :contacts, only: [:new, :create]

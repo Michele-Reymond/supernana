@@ -1,4 +1,4 @@
-<%= link_to "Désactiver l'alarme", root_path %>
+<%= link_to "Désactiver l'alarme", alert_path(@alert), method: :patch %>
 
 <p>Pas de panique...</p>
 <p>Nous avons envoyé un message à <%= @contact.first_name %></p>
