@@ -1,4 +1,4 @@
-<h3>Les alerts d'aujourd'hui</h3>
+<h3>Les alertes d'aujourd'hui</h3>
 <ol>
   <% @alerts.each do |alert| %>
     <li> <%= link_to "Alerte crée par #{alert.user.first_name} #{alert.user.last_name}", alert_path(alert)  %></li>
