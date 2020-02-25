@@ -1,5 +1,8 @@
 <div class="container">
-  <h1 class='alarm-button' ><%= link_to "alarme", stop_path %></h1>
+
+  <%= form_tag alerts_path do %>
+    <%= submit_tag 'alarme', class: 'btn btn-primary' %>
+  <% end %>
 
   <h3><%= link_to "documentations", "#" %></h3>
 </div>
