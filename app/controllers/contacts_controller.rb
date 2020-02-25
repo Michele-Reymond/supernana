@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
     @contact.phone_number = "+41#{@contact.phone_number.delete(' ')}"
 
     if @contact.save
-      redirect_to user_path(@user) #en attendant la page show du user
+      redirect_to user_path(@user)
     else
       render :new
     end
