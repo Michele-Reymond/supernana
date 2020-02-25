@@ -1,8 +1,10 @@
-<%= link_to "Désactiver l'alarme", alert_path(@alert), method: :patch %>
+<div class="s-container">
+  <%= link_to "Désactiver l'alarme", root_path %>
 
-<p>Pas de panique...</p>
-<p>Nous avons envoyé un message à <%= @contact.first_name %></p>
-<p>Les secours ont été contactés</p>
-<p>Vous êtes géolocalisé à la rue de Lausanne 29, 1000 Lausanne</p> <!-- géolocalisation à faire -->
+  <p>Pas de panique...</p>
+  <p>Nous avons envoyé un message à <%= @contact.first_name %></p>
+  <p>Les secours ont été contactés</p>
+  <p>Vous êtes géolocalisée à la rue de Lausanne 29, 1000 Lausanne</p> <!-- géolocalisation à faire -->
 
-<%= audio_tag "alarm.mp3", autoplay: true %>
+  <%= audio_tag "alarm.mp3", autoplay: true %>
+</div>
