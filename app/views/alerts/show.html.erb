@@ -1,0 +1,19 @@
+
+<% if (((Time.now - @alert.started_at)/60).to_i) <= 60 %>
+  <h4> Cette alerte a été crée il y a <%= (((Time.now - @alert.started_at)/60).to_i) == 1 ? "#{((Time.now - @alert.started_at)/60).to_i} minute" : "#{((Time.now - @alert.started_at)/60).to_i} minutes." %></h4>
+<% else %>
+  <h4>Cette alerte a été crée il y a plus d'une heure. </h4>
+<% end %>
+
+
+<% if @alert.ended_at? %>
+  <% if (((Time.now - @alert.ended_at)/60).to_i) <= 60 %>
+    <h4>Cette alerte a été arrêtée il y a <%= (((Time.now - @alert.ended_at)/60).to_i) == 1 ? "#{((Time.now - @alert.ended_at)/60).to_i} minute" : "#{((Time.now - @alert.ended_at)/60).to_i} minutes." %></h4>
+  <% else %>
+    <h4>Cette alerte a été arrêtée il y a plus d'une heure. </h4>
+  <% end %>
+<% else %>
+  <h4>Cette alerte est toujours active!!!</h4>
+<% end %>
+
+<p><%= link_to "Retour", alerts_path %></p>

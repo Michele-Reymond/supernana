@@ -1,6 +1,5 @@
 <div class="s-container">
   <h1>Bienvenue sur ton profil <%= @user.first_name %></h1>
-
   <% if current_user.photo.attached? %>
     <%= cl_image_tag current_user.photo.key %>
   <% else %>

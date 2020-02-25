@@ -1,0 +1,4 @@
+<h3><%= @document.title %></h3>
+<p><%= @document.content %></p>
+<button><%= link_to 'Consulter cette article en ligne', @document.url, :target => "_blank" %></button>
+<%= link_to 'retour', documents_path %>
