@@ -8,4 +8,4 @@
 <p><%= @user.first_name %></p>
 <p><%= @user.last_name %></p>
 <p><%= @user.email %></p>
-<p><%= link_to "add a contact", new_user_contact_path %></p>
+<p><%= link_to "add a contact", new_user_contact_path(@user) %></p>
