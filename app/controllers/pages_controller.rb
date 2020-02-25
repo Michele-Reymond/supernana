@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def stop
+    @contact = current_user.contacts.first
   end
 
 end
