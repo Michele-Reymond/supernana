@@ -1,28 +1,30 @@
 .s-button {
   display: block;
-  background-color: white;
+  background-color: $violet;
   padding: 8px 20px;
   border: none;
-  border-bottom: 6px solid $violet;
+  border-bottom: 6px solid $vert;
   border-right: 6px solid $rose;
-  color: $violet;
+  color: $white;
   font-family: $s-font;
   font-size: $s-font-size;
   font-weight: s-font-weight;
   text-align: center;
+  transition: 0.2s;
 }
 
 .s-button:hover {
-  border-bottom: 5px solid $violet;
-  border-right: 5px solid $rose;
+  border-bottom: 5px solid $vert;
+  border-right: 5px solid $violet;
+  transition: 0.2s;
+  background-color: $rose;
   text-decoration: none;
-  color: $violet;
+  color: $white;
 }
 
 .s-button:active {
   border-bottom: 4px solid $violet;
   border-right: 4px solid $white;
-  background-color: $rose;
 }
 
 .s-button:focus {

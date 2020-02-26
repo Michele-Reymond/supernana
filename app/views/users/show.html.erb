@@ -1,14 +1,20 @@
-<div class="s-container">
-  <h1>Bienvenue sur ton profil <%= @user.first_name %></h1>
-  <% if current_user.photo.attached? %>
-    <%= cl_image_tag current_user.photo.key %>
-  <% else %>
-    <%= image_tag "profile.png" %>
-  <% end %>
-  <p><%= @user.first_name %></p>
-  <p><%= @user.last_name %></p>
-  <p><%= @user.email %></p>
+<div class="green-bg">
+  <div class="item-container">
+      <% if current_user.photo.attached? %>
+        <%= cl_image_tag current_user.photo.key, class: 'avatar-large' %>
+      <% else %>
+        <%= image_tag "profile.png", class: 'avatar-large' %>
+      <% end %>
+    <div class="profil-infos">
+      <p><%= @user.first_name %></p>
+      <p><%= @user.last_name %></p>
+      <p><%= @user.email %></p>
+      <%= link_to "Modifier", edit_user_registration_path %>
+    </div>
+  </div>
+</div>
+
+<div class="item-container">
   <p><%= link_to "Ajouter un contact", new_user_contact_path(@user), class: 's-button' %></p>
   <p><%= link_to "Alertes du jour", alerts_path, class: 's-button'  %></p>
-  <p><%= link_to "Modifier mon profil", edit_user_registration_path, class: 's-button' %></p>
 </div>

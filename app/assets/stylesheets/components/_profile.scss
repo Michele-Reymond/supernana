@@ -1,0 +1,30 @@
+.profil-infos {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profil-infos p {
+  margin: 0;
+  font-family: $s-font;
+  color: $violet;
+  text-align: center;
+}
+
+
+.profil-infos p:nth-child(-n+2) {
+  font-size: $s-font-size-big;
+  font-weight: $s-font-weight-b;
+  margin-top: -15px;
+}
+
+.profil-infos a {
+  margin-top: 18px;
+  color: $rose;
+  text-align: center;
+}
+
+.profil-infos a:hover {
+  color: $violet;
+  text-decoration: none;
+}
