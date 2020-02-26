@@ -1,3 +1,5 @@
+require 'nexmo'
+
 class AlertsController < ApplicationController
   def index
   end
@@ -11,10 +13,12 @@ class AlertsController < ApplicationController
   end
 
   def create
+    client = Nexmo::Client.new(api_key: ENV['NEXMO_API_KEY'], api_secret: ENV['NEXMO_API_SECRET'])
     @alert = Alert.new()
     @alert.user = current_user
     @alert.started_at = DateTime.now
     if @alert.save
+      @alert.send_message(client)
       redirect_to stop_path
     else
       render :new
