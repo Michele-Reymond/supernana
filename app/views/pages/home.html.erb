@@ -1,6 +1,10 @@
 <div class="s-container">
   <div class="item-container">
-    <%= link_to "alarme", "#", class: 'alarm-button', id: "location", data: {path: alerts_url} %>
+    <% if user_signed_in? %>
+      <%= link_to "alarme", "#", class: 'alarm-button', id: "location", data: {path: alerts_url} %>
+    <% else %>
+      <%= link_to "alarme", stop_alert_path, class: 'alarm-button', id: "location" %>
+    <% end %>
     <h3><%= link_to "documentations", resources_path %></h3>
   </div>
 </div>

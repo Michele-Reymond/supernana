@@ -1,6 +1,8 @@
 require 'nexmo'
 
+
 class AlertsController < ApplicationController
+
   def index
   end
 
