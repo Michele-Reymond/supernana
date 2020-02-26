@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/resources/documents', to: 'documents#index', as: :documents
   get '/resources/documents/:id', to: 'documents#show', as: :document
 
+  mount Sidekiq::Web => '/sidekiq'
+
   resources :alerts, only: [:index, :create, :update, :show]
 
   resources :users, only: [:show] do
