@@ -50,9 +50,6 @@
 }
 
 .openbtn {
-  position: fixed;
-  right: 0;
-  top: 20px;
   font-size: 20px;
   cursor: pointer;
   background-color: $violet;
@@ -69,8 +66,12 @@
 }
 
 #main {
+  position: fixed;
+  right: 0;
+  top: 20px;
   transition: margin-left .5s;
   padding: 16px;
+  padding-right: 0;
 }
 
 

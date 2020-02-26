@@ -5,15 +5,16 @@
       <% else %>
         <%= image_tag "profile.png", class: 'avatar-large' %>
       <% end %>
-
-    <p class="profil-name"><%= @user.first_name %></p>
-    <p><%= @user.last_name %></p>
-    <p><%= @user.email %></p>
+    <div class="profil-infos">
+      <p><%= @user.first_name %></p>
+      <p><%= @user.last_name %></p>
+      <p><%= @user.email %></p>
+      <%= link_to "Modifier", edit_user_registration_path %>
+    </div>
   </div>
 </div>
 
-<div class="s-container">
+<div class="item-container">
   <p><%= link_to "Ajouter un contact", new_user_contact_path(@user), class: 's-button' %></p>
   <p><%= link_to "Alertes du jour", alerts_path, class: 's-button'  %></p>
-  <p><%= link_to "Modifier mon profil", edit_user_registration_path, class: 's-button' %></p>
 </div>
