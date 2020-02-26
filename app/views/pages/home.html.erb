@@ -1,6 +1,6 @@
 <div class="s-container">
   <div class="item-container">
-    <%= link_to "alarme", alerts_path, method: :post, class: 'alarm-button' %>
+    <%= link_to "alarme", "#", class: 'alarm-button', id: "location", data: {path: alerts_url} %>
     <h3><%= link_to "documentations", resources_path %></h3>
   </div>
 </div>
