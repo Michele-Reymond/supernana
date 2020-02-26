@@ -32,7 +32,7 @@ puts 'Finished creating users!'
 puts 'Creating contacts...'
 
 
-john = Contact.new(first_name: 'John', last_name: 'Doe', phone_number: '+41791111111', user_id: marie.id)
+john = Contact.new(first_name: 'John', last_name: 'Doe', phone_number: '+41787372019', user_id: marie.id)
 john.save
 marc = Contact.new(first_name: 'Marc', last_name: 'Smith', phone_number: '+41792222222', user_id: sarah.id)
 marc.save
