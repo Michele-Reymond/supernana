@@ -1,8 +1,5 @@
 const sendPosition = () => {
-  console.log("COucouc");
   const position = navigator.geolocation.getCurrentPosition(succesPosition);
-
-  // Requete AJAX post qui envoie les donner sur le controller
 }
 
 
