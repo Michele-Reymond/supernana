@@ -1,8 +1,10 @@
 // Import Google fonts
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i,900,900i&display=swap");
 
-// Define fonts for body and headers
+// Bold and violet
 $s-font: "Source Sans Pro", "Helvetica", "sans-serif";
+$s-font-size: 1.2em;
+$s-font-weight: 700;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
