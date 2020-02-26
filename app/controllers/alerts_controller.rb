@@ -11,11 +11,11 @@ class AlertsController < ApplicationController
   end
 
   def create
-    @alert = Alert.new()
+    @alert = Alert.new(alert_params)
     @alert.user = current_user
     @alert.started_at = DateTime.now
     if @alert.save
-      redirect_to stop_path
+      render json: {path: stop_path}
     else
       render :new
     end
@@ -25,6 +25,12 @@ class AlertsController < ApplicationController
     @alert = Alert.find(params[:id])
     @alert.update(ended_at: DateTime.now)
     redirect_to root_path
+  end
+
+  private
+
+  def alert_params
+    params.require(:alert).permit(:latitude,:longitude)
   end
 end
 
