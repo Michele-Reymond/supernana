@@ -18,7 +18,7 @@ class AlertsController < ApplicationController
     @alert.user = current_user
     @alert.started_at = DateTime.now
     if @alert.save
-      @alert.send_message(client) unless @alert.user.contact == nil
+      @alert.send_message(client) if @alert.user.contacts.any?
       redirect_to stop_path
     else
       render :new
