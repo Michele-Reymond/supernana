@@ -29,10 +29,10 @@ const succesPosition = (pos) => {
 
 const initSendPosition = () => {
   const button = document.querySelector('#location');
-  button.addEventListener('click', sendPosition);
+  if(button) {
+    button.addEventListener('click', sendPosition);
+  }
+
 };
+
 export { initSendPosition };
-
-
-
-
