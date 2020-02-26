@@ -1,5 +1,5 @@
 <div class="s-container">
-  <%= link_to "Désactiver l'alarme", root_path %>
+  <%= link_to "Désactiver l'alarme", alert_path(@alert), method: :patch %>
 
   <p>Pas de panique...</p>
   <% unless current_user.contacts.first == nil %>
@@ -10,3 +10,4 @@
 
   <%= audio_tag "alarm.mp3", autoplay: true %>
 </div>
+
