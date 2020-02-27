@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   get 'chats/index'
   devise_for :users
 
+
+  resources :users, only: [:show] do
+    resources :contacts, only: [:new, :create, :edit, :update]
+  end
   root to: 'pages#home'
 
   get '/stop', to: 'pages#stop'
@@ -15,10 +19,7 @@ Rails.application.routes.draw do
 
   mount Sidekiq::Web => '/sidekiq'
 
-  resources :alerts, only: [:index, :create, :update, :show]
 
-  resources :users, only: [:show] do
-    resources :contacts, only: [:new, :create]
-  end
+  resources :alerts, only: [:index, :create, :update, :show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
