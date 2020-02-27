@@ -9,7 +9,7 @@
       <p><%= @user.first_name %></p>
       <p><%= @user.last_name %></p>
       <p><%= @user.email %></p>
-      <p>mon contact d'urgence est <strong><%= @user.contacts.first.first_name %></strong></p>
+      <p>mon contact d'urgence est <strong><%= @user.contacts.first.first_name if @user.contacts.any?%></strong></p>
       <%= link_to "Modifier", edit_user_registration_path %>
     </div>
   </div>
