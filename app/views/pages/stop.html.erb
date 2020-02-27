@@ -1,8 +1,6 @@
 
 <div class="green-box-container">
   <div class="s-container">
-
-
     <div class="item-container">
       <div class="stop-button">
         <%= link_to "Stopper l'alarme", alert_path(@alert), method: :patch %>
@@ -29,6 +27,6 @@
 
     </div>
 
-    <%= audio_tag "alarm.mp3", autoplay: true %>
+    <%= audio_tag "alarm.wav", autoplay: true %>
   </div>
 </div>>
