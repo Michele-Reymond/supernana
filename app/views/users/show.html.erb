@@ -9,12 +9,21 @@
       <p><%= @user.first_name %></p>
       <p><%= @user.last_name %></p>
       <p><%= @user.email %></p>
-      <p>mon contact d'urgence est <strong><%= @user.contacts.first.first_name if @user.contacts.any?%></strong></p>
       <%= link_to "Modifier", edit_user_registration_path %>
     </div>
   </div>
 </div>
 
 <div class="item-container">
+
+  <% if @user.contacts.any? %>
+    <p>Mon contact d'urgence est</p>
+    <p><strong><%= @user.contacts.first.first_name %> <%= @user.contacts.first.last_name %></strong>  <%= link_to "<i class='fas fa-user-edit'></i>".html_safe, edit_user_contact_path(current_user.contacts.first) %></p>
+    <p> <%= @user.contacts.first.phone_number %> </p>
+  <% else %>
+    <p>Pas de contact ajouté!</p>
+  <% end %>
+
+
   <p><%= link_to "Ajouter un contact", new_user_contact_path(@user), class: 's-button' %></p>
 </div>
