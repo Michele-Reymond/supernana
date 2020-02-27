@@ -1,7 +1,7 @@
 <div class="green-bg">
   <div class="item-container">
       <% if current_user.photo.attached? %>
-        <%= cl_image_tag current_user.photo.key, width: 150, height: 150, crop: :fill, gravity: :face, class: 'avatar-large' %>
+        <%= cl_image_tag current_user.photo.key, width: 150, height: 150, gravity: :auto, crop: :thumb, class: 'avatar-large' %>
       <% else %>
         <%= image_tag "profile.png", class: 'avatar-large' %>
       <% end %>
