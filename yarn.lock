@@ -4178,6 +4178,11 @@ loose-envify@^1.0.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+lottie-web@^5.6.5:
+  version "5.6.5"
+  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.6.5.tgz#3a2f5f6ba64fb492cf8557dae504d06ead132525"
+  integrity sha512-rpBnawJxb+4QhZz8PyZl6k5y4NpzFrpuV/+c/36w4pryKv6EWb9aEwsqCXl+zK1dYddyFyN1zdvsonJyk7aNTg==
+
 loud-rejection@^1.0.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/loud-rejection/-/loud-rejection-1.6.0.tgz#5b46f80147edee578870f086d04821cf998e551f"
