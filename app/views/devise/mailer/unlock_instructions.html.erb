@@ -1,7 +1,19 @@
-<p>Bonjour <%= @resource.email %>!</p>
+<div class="form-container">
 
-<p>Votre compte a été verrouillé en raison d'un nombre excessif de tentatives de connexion infructueuses.</p>
+  <div class="green-bg">
+    <div class= "s-container">
+        <div class="item-container">
+          <h1>Bonjour <%= @resource.email %>!</h1>
+        </div>
+    </div>
+  </div>
 
-<p>Cliquez sur le lien ci-dessous pour déverrouiller votre compte:</p>
+  <div class="item-container">
+    <p>Votre compte a été verrouillé en raison d'un nombre excessif de tentatives de connexion infructueuses.</p>
 
-<p><%= link_to 'Débloquer mon compte', unlock_url(@resource, unlock_token: @token) %></p>
+    <p>Cliquez sur le lien ci-dessous pour déverrouiller votre compte:</p>
+
+    <p><%= link_to 'Débloquer mon compte', unlock_url(@resource, unlock_token: @token), class: 's-button' %></p>
+  </div>
+
+</div>

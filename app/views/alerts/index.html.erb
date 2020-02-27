@@ -1,8 +1,21 @@
-<h3>Les alertes d'aujourd'hui</h3>
-<ol>
-  <% @alerts.each do |alert| %>
-    <li> <%= link_to "Alerte crée par #{alert.user.first_name} #{alert.user.last_name}", alert_path(alert)  %></li>
-  <% end %>
-</ol>
+<div class="form-container">
 
-<p><%= link_to "Retour", user_path(current_user) %></p>
+  <div class="green-bg">
+    <div class= "s-container">
+        <div class="item-container">
+          <h1>Les alertes d'aujourd'hui</h1>
+        </div>
+    </div>
+  </div>
+
+  <div class="item-container">
+    <ol>
+      <% @alerts.each do |alert| %>
+        <li> <%= link_to "Alerte crée par #{alert.user.first_name} #{alert.user.last_name}", alert_path(alert)  %></li>
+      <% end %>
+    </ol>
+
+    <p><%= link_to "Retour", user_path(current_user) %></p>
+  </div>
+
+</div>

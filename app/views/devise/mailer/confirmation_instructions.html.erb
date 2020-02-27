@@ -1,5 +1,16 @@
-<p>Bienvenue <%= @email %>!</p>
+<div class="form-container">
 
-<p>Vous pouvez confirmer l'email de votre compte via le lien ci-dessous:</p>
+  <div class="green-bg">
+    <div class= "s-container">
+        <div class="item-container">
+          <h1>Bienvenue <%= @email %>!</h1>
+        </div>
+    </div>
+  </div>
 
-<p><%= link_to 'Confirmer mon compte', confirmation_url(@resource, confirmation_token: @token) %></p>
+  <div class="item-container">
+    <p>Vous pouvez confirmer l'email de votre compte via le lien ci-dessous:</p>
+    <p><%= link_to 'Confirmer mon compte', confirmation_url(@resource, confirmation_token: @token), class: 's-button' %></p>
+  </div>
+
+</div>

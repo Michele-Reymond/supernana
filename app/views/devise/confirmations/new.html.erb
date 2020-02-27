@@ -1,20 +1,32 @@
-<h2>Renvoyer les instructions de confirmation</h2>
+<div class="form-container">
 
-<%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
-  <%= f.full_error :confirmation_token %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email),
-                input_html: { autocomplete: "email" } %>
+  <div class="green-bg">
+    <div class= "s-container">
+        <div class="item-container">
+          <h1>Renvoyer les instructions de confirmation</h1>
+        </div>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Renvoyer les instructions de confirmation" %>
-  </div>
-<% end %>
+  <div class="item-container">
+    <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+      <%= f.error_notification %>
+      <%= f.full_error :confirmation_token %>
 
-<%= render "devise/shared/links" %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email),
+                    input_html: { autocomplete: "email" } %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Renvoyer les instructions de confirmation", class: 's-button' %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+  </div>
+
+</div>
