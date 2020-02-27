@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get '/resources', to: 'pages#resources'
   get '/resources/documents', to: 'documents#index', as: :documents
   get '/resources/documents/:id', to: 'documents#show', as: :document
+  get '/stop_alert', to: 'users#stop_alert'
+
+  mount Sidekiq::Web => '/sidekiq'
 
   resources :alerts, only: [:index, :create, :update, :show]
 
