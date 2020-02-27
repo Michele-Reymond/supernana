@@ -12,3 +12,19 @@
   font-weight: $s-font-weight;
   margin: 50px 20px;
 }
+
+.stop-button {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $rose;
+  color: $violet;
+  font-family: $s-font;
+  font-size: $s-font-size;
+  font-weight: $s-font-weight;
+  margin: 20px;
+  text-align: center;
+}

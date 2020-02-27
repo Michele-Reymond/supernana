@@ -18,9 +18,19 @@ class ContactsController < ApplicationController
     end
   end
 
+  def edit
+    @user = current_user
+    @contact = Contact.find(params[:user_id])
+  end
+
+  def update
+    @contact = Contact.find(params[:id])
+    @contact.update(contact_params)
+    redirect_to user_path(current_user)
+  end
+
   private
   def contact_params
     params.require(:contact).permit(:first_name, :last_name, :phone_number)
   end
-
 end
