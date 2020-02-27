@@ -1,11 +1,11 @@
 <div class= "s-container">
-  <h1>Add an emergency contact</h1>
+  <h1>Ajouter un contact d'urgence</h1>
   <%= simple_form_for [@user, @contact] do |f| %>
-  <%= f.input :first_name, as: :string, placeholder: 'Paul', label: 'First name', autofocus: true %>
-  <%= f.input :last_name, as: :string, placeholder: 'Lepoulp', label: 'Last name', autofocus: true %>
+  <%= f.input :first_name, as: :string, placeholder: 'Paul', label: 'Prénom', autofocus: true %>
+  <%= f.input :last_name, as: :string, placeholder: 'Lepoulp', label: 'Nom', autofocus: true %>
   <p>+ 41</p>
-  <%= f.input :phone_number, as: :string, placeholder: '765 5575 52', label: 'Phone number', autofocus: true %>
-  <%= f.button :submit, 'Add a contact', class: 's-button' %>
+  <%= f.input :phone_number, as: :string, placeholder: '765 5575 52', label: 'Numéro de téléphone', autofocus: true %>
+  <%= f.button :submit, 'Ajouter le contact', class: 's-button' %>
   <% end %>
 </div>
 
