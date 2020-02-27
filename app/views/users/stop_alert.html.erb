@@ -3,7 +3,7 @@
 
     <div class="item-container">
       <div class="stop-button">
-        <%= link_to "Stopper l'alarme", root_path %>
+        <%= link_to "Stopper l'alarme", new_user_registration_path %>
       </div>
     </div>
 
@@ -15,14 +15,12 @@
 
       <div class="messages">
         <i class="fas fa-meteor"></i>
-        <p>Les secours ont été contactés</p>
+        <div>
+          <p>Pensez-y! Avec un compte utilisateur nous pouvons aussi: </p>
+          <p> - envoyer un message à un contact d'urgence prédéfini </p>
+          <p> - vous géolocaliser auprès de tous les utilisateurs de notre app! </p>
+        </div>
       </div>
-
-      <div class="messages">
-        <i class="fas fa-meteor"></i>
-        <p>Vous êtes géolocalisée à la rue de Lausanne 29, 1000 Lausanne</p>
-      </div>
-
     </div>
 
     <%= audio_tag "alarm.mp3", autoplay: true %>
