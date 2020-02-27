@@ -9,6 +9,7 @@
       <p><%= @user.first_name %></p>
       <p><%= @user.last_name %></p>
       <p><%= @user.email %></p>
+      <p>mon contact d'urgence est <strong><%= @user.contacts.first.first_name %></strong></p>
       <%= link_to "Modifier", edit_user_registration_path %>
     </div>
   </div>
@@ -16,5 +17,4 @@
 
 <div class="item-container">
   <p><%= link_to "Ajouter un contact", new_user_contact_path(@user), class: 's-button' %></p>
-  <p><%= link_to "Alertes du jour", alerts_path, class: 's-button'  %></p>
 </div>

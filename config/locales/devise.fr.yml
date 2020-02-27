@@ -1,4 +1,10 @@
 fr:
+  activerecord:
+    attributes:
+      contact:
+        first_name: "Prénom"
+        last_name: "Nom"
+        phone_number: "Numéro de téléphone"
   devise:
     confirmations:
       confirmed: "Votre compte a été validé."
@@ -54,6 +60,7 @@ fr:
   errors:
     messages:
       already_confirmed: "a déjà été validé(e), veuillez essayer de vous connecter"
+      blank: "obligatoire, merci de bien vouloir compléter ce champ"
       confirmation_period_expired: "à confirmer dans les %{period}, merci de faire une nouvelle demande"
       expired: "a expiré, merci d'en faire une nouvelle demande"
       not_found: "n'a pas été trouvé(e)"
@@ -61,3 +68,4 @@ fr:
       not_saved:
         one: "1 erreur a empêché ce(tte) %{resource} d'être sauvegardé(e) :"
         other: "%{count} erreurs ont empêché ce(tte) %{resource} d'être sauvegardé(e) :"
+
