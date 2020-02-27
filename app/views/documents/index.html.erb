@@ -1,8 +1,20 @@
-<h1>Tous les documents</h1>
-<% @documents.each do |document| %>
-  <%= link_to document_path(document) do %>
-    <h3><%= document.title %></h3>
-  <% end %>
-    <p> Un article de <%= document.author %></p>
-<% end %>
-<%= link_to 'retour', resources_path %>
+  <div class="green-bg">
+    <div class= "s-container">
+        <div class="item-container">
+          <h1>Tous les documents</h1>
+        </div>
+    </div>
+  </div>
+
+  <div class= "s-container">
+      <% @documents.each do |document| %>
+        <div>
+          <%= link_to document_path(document) do %>
+            <h3><%= document.title %></h3>
+          <% end %>
+            <p> Un article de <%= document.author %></p>
+        </div>
+      <% end %>
+
+      <%= link_to 'retour', resources_path %>
+</div>

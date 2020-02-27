@@ -1,7 +1,19 @@
-<p>Bonjour <%= @email %>!</p>
+<div class="form-container">
 
-<% if @resource.try(:unconfirmed_email?) %>
-  <p>Nous vous contactons pour vous informer que votre adresse e-mail est modifiée en <%= @resource.unconfirmed_email %>.</p>
-<% else %>
-  <p>Nous vous contactons pour vous informer que votre adresse e-mail a été remplacée par <%= @resource.email %>.</p>
-<% end %>
+  <div class="green-bg">
+    <div class= "s-container">
+        <div class="item-container">
+          <h1>Bonjour <%= @email %>!</h1>
+        </div>
+    </div>
+  </div>
+
+  <div class="item-container">
+    <% if @resource.try(:unconfirmed_email?) %>
+      <p>Nous vous contactons pour vous informer que votre adresse e-mail est modifiée en <%= @resource.unconfirmed_email %>.</p>
+    <% else %>
+      <p>Nous vous contactons pour vous informer que votre adresse e-mail a été remplacée par <%= @resource.email %>.</p>
+    <% end %>
+  </div>
+
+</div>

@@ -8,3 +8,20 @@
   padding-right: 10px;
   padding-top: 7px;
 }
+
+
+.form-control {
+  border-right: 2px solid $rose;
+  border-bottom: 2px solid $rose;
+  border-left: 2px solid $vert;
+  border-top: 2px solid $vert;
+}
+
+.form-control:hover {
+  background-color: $vert;
+}
+
+h1 {
+  font-size: 1.8em;
+  text-align: center;
+}

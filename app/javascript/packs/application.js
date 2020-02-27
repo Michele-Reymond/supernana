@@ -7,9 +7,9 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { addIndicatif } from '../components/phonenumber';
 
 
-initMapbox();
 openNav();
 closeNav();
+initMapbox();
 initSendPosition();
 addIndicatif();
 
