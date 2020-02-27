@@ -19,6 +19,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'cloudinary', '~> 1.12.0'
 gem 'nexmo'
+gem 'geocoder'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
