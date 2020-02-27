@@ -1,9 +1,30 @@
-<div class="s-container">
-  <%= link_to "Désactiver l'alarme", root_path %>
+<div class="green-box-container">
+  <div class="s-container">
 
-  <p>Pas de panique...</p>
-  <p>Les secours ont été contactés</p>
-  <p>Vous êtes géolocalisée à la rue de Lausanne 29, 1000 Lausanne</p> <!-- géolocalisation à faire -->
+    <div class="item-container">
+      <div class="stop-button">
+        <%= link_to "Stopper l'alarme", root_path %>
+      </div>
+    </div>
 
-  <%= audio_tag "alarm.mp3", autoplay: true %>
-</div>
+    <div class="item-container">
+      <div class="messages">
+        <i class="fas fa-meteor"></i>
+        <p>Pas de panique...</p>
+      </div>
+
+      <div class="messages">
+        <i class="fas fa-meteor"></i>
+        <p>Les secours ont été contactés</p>
+      </div>
+
+      <div class="messages">
+        <i class="fas fa-meteor"></i>
+        <p>Vous êtes géolocalisée à la rue de Lausanne 29, 1000 Lausanne</p>
+      </div>
+
+    </div>
+
+    <%= audio_tag "alarm.mp3", autoplay: true %>
+  </div>
+</div>>
