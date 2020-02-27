@@ -1,0 +1,20 @@
+.messages {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.messages p {
+  margin-bottom: 0;
+}
+
+.messages i {
+  font-size: 2em;
+  color: $vert;
+  padding: 10px;
+  margin-right: 20px;
+}
+
