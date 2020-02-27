@@ -2,6 +2,7 @@
   <div class="item-container">
     <%= link_to "alarme", "#", class: 'alarm-button', id: "location", data: {path: alerts_url} %>
     <h3><%= link_to "documentations", resources_path %></h3>
+    <p><%= link_to ("<i class='far fa-bell'></i>").html_safe, alerts_path %></p>
   </div>
 </div>
 
