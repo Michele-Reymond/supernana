@@ -4,10 +4,15 @@ require 'nexmo'
 class AlertsController < ApplicationController
 
   def index
-  end
-
-  def index
     @alerts = Alert.where("started_at::date = ?", Date.today)
+    @markers = @alerts.map do |alert|
+      {
+        lat: alert.latitude,
+        lng: alert.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { alert: alert }),
+        image_url: helpers.asset_url('marker.png')
+      }
+    end
   end
 
   def show
@@ -34,7 +39,7 @@ class AlertsController < ApplicationController
   private
 
   def alert_params
-    params.require(:alert).permit(:latitude,:longitude)
+    params.require(:alert).permit(:latitude, :longitude)
   end
 end
 
