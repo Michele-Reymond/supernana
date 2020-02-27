@@ -1,9 +1,12 @@
 class Alert < ApplicationRecord
+
+  reverse_geocoded_by :latitude, :longitude, params: { language: 'fr' }
   belongs_to :user
   has_many :messages
   validates :started_at, presence: true
 
   after_create :send_message
+  after_validation :reverse_geocode
 
   private
 
