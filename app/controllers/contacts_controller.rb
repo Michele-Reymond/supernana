@@ -13,6 +13,7 @@ class ContactsController < ApplicationController
 
     if @contact.save
       redirect_to user_path(@user)
+      flash.alert = "Contact crée avec succès"
     else
       render :new
     end
@@ -27,6 +28,7 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
     @contact.update(contact_params)
     redirect_to user_path(current_user)
+    flash.alert = "Contact modifié avec succès"
   end
 
   private
