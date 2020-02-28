@@ -3,6 +3,7 @@ require 'nexmo'
 
 class AlertsController < ApplicationController
 
+
   def index
     @alerts = Alert.where("started_at::date = ?", Date.today)
     @markers = @alerts.map do |alert|

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_26_105344) do
+ActiveRecord::Schema.define(version: 2020_02_27_131811) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,7 +44,15 @@ ActiveRecord::Schema.define(version: 2020_02_26_105344) do
     t.datetime "updated_at", null: false
     t.decimal "latitude", precision: 8, scale: 6
     t.decimal "longitude", precision: 8, scale: 6
+    t.string "address"
     t.index ["user_id"], name: "index_alerts_on_user_id"
+  end
+
+  create_table "chats", force: :cascade do |t|
+    t.text "message"
+    t.string "username"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "contacts", force: :cascade do |t|
