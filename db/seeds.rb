@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Contact.destroy_all
+Message.destroy_all
+Alert.destroy_all
 User.destroy_all
 
 
@@ -44,17 +47,19 @@ puts 'Finished creating contacts!'
 
 puts 'Creating alerts...'
 
-alert1 = Alert.new(started_at: "25/02/2020 10:00", user_id: marie.id)
-alert1.save
+# byebug
+alert1 = Alert.new(started_at: "28/02/2020 10:00", user_id: marie.id, latitude: 46.78365, longitude: 7.151964)
+alert1.save!
 
-alert2 = Alert.new(started_at: "25/02/2020 12:00", user_id: marie.id)
+alert2 = Alert.new(started_at: "28/02/2020 12:00", user_id: marie.id, latitude: 46.5218269, longitude: 6.6327025)
 alert2.save
 
-alert3 = Alert.new(started_at: "25/02/2020 15:00", user_id: sarah.id)
+alert3 = Alert.new(started_at: "28/02/2020 15:00", user_id: sarah.id, latitude: 46.2017559, longitude: 6.1466014)
 alert3.save
 
-alert4 = Alert.new(started_at: "25/02/2020 17:00", user_id: julie.id)
+alert4 = Alert.new(started_at: "28/02/2020 17:00", user_id: julie.id, latitude: 46.9482713, longitude: 7.4514512)
 alert4.save
+
 
 
 puts 'Finished creating alerts!'
