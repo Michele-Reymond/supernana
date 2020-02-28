@@ -18,6 +18,14 @@
   height: 70vh;
 }
 
+.mapboxgl-control-container > .mapboxgl-ctrl-top-left {
+
+}
+
+// .mapbox-directions-component {
+//   display: none;
+// }
+
 
 // ––––––––––––––––– MEDIA QUERIES ––––––––––––––––––
 
@@ -35,6 +43,11 @@
 #map {
   margin-top: -30px;
   width: 100vw;
-  height: 40vh;
+  height: 50vh;
+}
+
+.mapboxgl-control-container > .mapboxgl-ctrl-top-left {
+  position: fixed;
+  top: 422px;
 }
 }
