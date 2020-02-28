@@ -1,18 +1,24 @@
 <div class="resources">
-   <div class="resources-container">
-    <h3><%= link_to 'Communauté', '#' %></h3>
-    <p>Discuter et parler librement de vos expériences avec le chat Supernana.</p>
-  </div>
+
   <div class="resources-container">
-    <h3><%= link_to 'Documentation', documents_path %></h3>
-    <p>Parce qu'être informée, c'est agir mieux et trouvez les bonnes solutions.
-       Retrouvez ici des statistiques, articles; etc...</p>
-  </div>
-  <div class="resources-container">
-    <h3><%= link_to 'Infos pratiques', '#' %></h3>
-    <p>Vous souhaitez porter plainte, obtenir un suivi psychologique ou peut-être vous investir au sein d'une association?
-       Retrouvez toutes les informations nécessaires pour soutenir et être soutenue!</p>
+    <%= link_to '#' do %>
+      <h3>Communauté</h3>
+      <p>Discuter et parler librement de vos expériences avec le chat Supernana.</p>
+    <% end %>
   </div>
 
+  <div class="resources-container">
+    <%= link_to documents_path do %>
+      <h3>Documentation</h3>
+      <p>Parce qu'être informée, c'est agir mieux et trouvez les bonnes solutions. Retrouvez ici des statistiques, articles; etc...</p>
+    <% end %>
+  </div>
+
+  <div class="resources-container">
+    <%= link_to '#' do %>
+      <h3>Infos pratiques</h3>
+      <p>Vous souhaitez porter plainte, obtenir un suivi psychologique ou peut-être vous investir au sein d'une association? Retrouvez toutes les informations nécessaires pour soutenir et être soutenue!</p>
+    <% end %>
+  </div>
 </div>
 

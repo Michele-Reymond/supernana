@@ -1,0 +1,41 @@
+.doc-container {
+  grid-column: span 2;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid $vert;
+  margin: 10px 30px;
+}
+
+.doc-container a {
+  color: $rose;
+  align-self: flex-end;
+  font-size: 1.5em;
+}
+
+.doc-container a:hover {
+  color: $vert;
+}
+
+
+// ––––––––––––––––– MEDIA QUERIES ––––––––––––––––––
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .doc-container {
+    grid-column: span 3;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .doc-container {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .doc-container {
+    grid-column: span 1;
+  }
+}

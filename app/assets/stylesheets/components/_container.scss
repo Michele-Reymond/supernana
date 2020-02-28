@@ -22,34 +22,8 @@
 .green-box-container {
   width: 100vw;
   height: 100vh;
-  border: 10px solid $vert;
-}
-
-.resources {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.resources-container {
-  padding: 50px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.resources-container:nth-child(1) {
-  background-color: $rose;
-}
-
-.resources-container:nth-child(2) {
-  background-color: $vert;
-}
-
-.resources-container:nth-child(3) {
-  background-color: $violet;
+  outline: 10px solid $vert;
+  outline-offset: -10px;
 }
 
 
