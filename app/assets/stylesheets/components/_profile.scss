@@ -1,5 +1,5 @@
 .profil-infos {
-  margin-top: 25px;
+  margin-top: 35px;
   display: flex;
   flex-direction: column;
 }
@@ -18,13 +18,29 @@
   margin-top: -15px;
 }
 
-.profil-infos a {
+.settings {
   margin-top: 18px;
+  font-size: 1.2em;
   color: $rose;
+  text-align: center;
+  background-color: white;
+  padding: 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: 90px;
+}
+
+.settings:hover {
+  background-color: $rose;
+  color: white;
+  text-decoration: none;
+}
+
+.info-container {
+  max-width: 200px;
   text-align: center;
 }
 
-.profil-infos a:hover {
-  color: $violet;
-  text-decoration: none;
+.info-container p {
+  margin-bottom: 40px;
 }

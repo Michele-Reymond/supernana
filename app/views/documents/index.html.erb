@@ -8,13 +8,15 @@
 
   <div class= "s-container">
       <% @documents.each do |document| %>
-        <div>
+        <div class="doc-container">
+          <h3><%= document.title %></h3>
+          <p> Un article de <%= document.author %></p>
+
           <%= link_to document_path(document) do %>
-            <h3><%= document.title %></h3>
+            <i class="fas fa-arrow-right"></i>
           <% end %>
-            <p> Un article de <%= document.author %></p>
         </div>
       <% end %>
 
-      <%= link_to 'retour', resources_path %>
+      <%#= link_to 'retour', resources_path %>
 </div>

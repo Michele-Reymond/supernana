@@ -1,19 +1,23 @@
-<p>Alerte déclenchée par <%= alert.user.first_name %> <%= alert.user.last_name %></p>
+<p>
+
 
 <% if (((Time.now - alert.started_at)/60).to_i) <= 60 %>
-  <p> Crée il y a <%= (((Time.now - alert.started_at)/60).to_i) == 1 ? "#{((Time.now - alert.started_at)/60).to_i} minute" : "#{((Time.now - alert.started_at)/60).to_i} minutes." %></p>
+  Alerte créée il y a <%= (((Time.now - alert.started_at)/60).to_i) == 1 ? "#{((Time.now - alert.started_at)/60).to_i} minute" : "#{((Time.now - alert.started_at)/60).to_i} minutes" %>
 <% else %>
-  <p>Crée il y a plus d'une heure. </p>
+  Alerte créée il y a plus d'une heure
 <% end %>
 
+par <strong><%= alert.user.first_name %> <%= alert.user.last_name %></strong>
 
 <% if alert.ended_at? %>
   <% if (((Time.now - alert.ended_at)/60).to_i) <= 60 %>
-    <p>Arrêtée il y a <%= (((Time.now - alert.ended_at)/60).to_i) == 1 ? "#{((Time.now - alert.ended_at)/60).to_i} minute" : "#{((Time.now - alert.ended_at)/60).to_i} minutes." %></p>
+    et arrêtée il y a <%= (((Time.now - alert.ended_at)/60).to_i) == 1 ? "#{((Time.now - alert.ended_at)/60).to_i} minute" : "#{((Time.now - alert.ended_at)/60).to_i} minutes" %>
   <% else %>
-    <p>Arrêtée il y a plus d'une heure. </p>
+    et arrêtée il y a plus d'une heure.
   <% end %>
 <% else %>
-  <p>Cette alerte est toujours active!!!</p>
+  et elle est toujours active!!!
 <% end %>
 
+
+</p>

@@ -1,5 +1,8 @@
 <div class="green-bg">
   <div class="item-container">
+      <%= link_to edit_user_registration_path do %>
+        <i class="fas fa-cog settings"></i>
+      <% end %>
       <% if current_user.photo.attached? %>
         <%= cl_image_tag current_user.photo.key, width: 150, height: 150, gravity: :face, crop: :thumb, :zoom=>1.1, class: 'avatar-large' %>
       <% else %>
@@ -9,7 +12,6 @@
       <p><%= @user.first_name %></p>
       <p><%= @user.last_name %></p>
       <p><%= @user.email %></p>
-      <%= link_to "Modifier", edit_user_registration_path %>
     </div>
   </div>
 </div>
@@ -17,13 +19,14 @@
 <div class="item-container">
 
   <% if @user.contacts.any? %>
-    <p>Mon contact d'urgence est</p>
-    <p><strong><%= @user.contacts.first.first_name %> <%= @user.contacts.first.last_name %></strong>  <%= link_to "<i class='fas fa-user-edit'></i>".html_safe, edit_user_contact_path(current_user.contacts.first) %></p>
-    <p> <%= @user.contacts.first.phone_number %> </p>
+  <div class="info-container">
+    <p><strong><%= @user.contacts.first.first_name %> <%= @user.contacts.first.last_name %></strong> est mon contact d'urgence et son numéro de téléphone est le <strong><%= @user.contacts.first.phone_number %></strong> </p>
+    <%= link_to "Modifier ce contact", edit_user_contact_path(current_user.contacts.first), class: 's-button' %>
+  </div>
   <% else %>
     <p>Pas de contact ajouté!</p>
+    <%= link_to "Ajouter un contact", new_user_contact_path(@user), class: 's-button' %>
   <% end %>
 
 
-  <p><%= link_to "Ajouter un contact", new_user_contact_path(@user), class: 's-button' %></p>
 </div>

@@ -1,0 +1,37 @@
+.resources {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.resources-container {
+  padding: 0 20%;
+  flex-grow: 0.5;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.resources-container a:hover {
+  text-decoration: none;
+}
+
+.resources-container:hover {
+  flex-grow: 1;
+  transition: 0.5s;
+}
+
+.resources-container:nth-child(1) {
+  background-color: $rose;
+}
+
+.resources-container:nth-child(2) {
+  background-color: $vert;
+}
+
+.resources-container:nth-child(3) {
+  background-color: $white;
+}
