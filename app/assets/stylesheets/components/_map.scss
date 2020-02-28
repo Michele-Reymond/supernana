@@ -22,10 +22,6 @@
 
 }
 
-// .mapbox-directions-component {
-//   display: none;
-// }
-
 
 // ––––––––––––––––– MEDIA QUERIES ––––––––––––––––––
 
@@ -43,7 +39,7 @@
 #map {
   margin-top: -30px;
   width: 100vw;
-  height: 50vh;
+  height: 280px;
 }
 
 .mapboxgl-control-container > .mapboxgl-ctrl-top-left {
