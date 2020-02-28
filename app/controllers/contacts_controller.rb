@@ -25,8 +25,13 @@ class ContactsController < ApplicationController
 
   def update
     @contact = Contact.find(params[:id])
-    @contact.update(contact_params)
-    redirect_to user_path(current_user)
+    @user = current_user
+
+    if @contact.update(contact_params)
+      redirect_to user_path(current_user)
+    else
+      render :edit
+    end
   end
 
   private
