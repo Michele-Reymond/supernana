@@ -10,6 +10,24 @@ const initMapbox = () => {
       style: 'mapbox://styles/mapbox/streets-v10'
     });
 
+
+    const directions = new MapboxDirections({
+      accessToken:  mapboxgl.accessToken,
+      unit: 'metric',
+      profile: 'mapbox/cycling'
+    });
+
+    map.addControl(directions, 'top-left');
+
+    map.addControl(
+      new mapboxgl.GeolocateControl({
+      positionOptions: {
+      enableHighAccuracy: true
+      },
+      trackUserLocation: true
+      })
+    );
+
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
@@ -46,5 +64,6 @@ const addMarkersToMap = (map, markers) => {
       .addTo(map);
   });
 };
+
 
 export { initMapbox };
