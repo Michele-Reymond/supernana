@@ -1,8 +1,39 @@
 .mapboxgl-popup {
-  max-width: 200px;
+  max-width: 150px;
+  padding: 20px;
+}
+
+.mapboxgl-popup p {
+  padding-top: 20px;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+}
+
+#map {
+  width: 70vw;
+  height: 70vh;
+}
+
+
+// ––––––––––––––––– MEDIA QUERIES ––––––––––––––––––
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+
+}
+
+@media (max-width: 480px) {
+
+#map {
+  margin-top: -30px;
+  width: 100vw;
+  height: 40vh;
+}
 }
