@@ -26,9 +26,14 @@ class ContactsController < ApplicationController
 
   def update
     @contact = Contact.find(params[:id])
-    @contact.update(contact_params)
-    redirect_to user_path(current_user)
-    flash.alert = "Contact modifié avec succès"
+    @user = current_user
+
+    if @contact.update(contact_params)
+      redirect_to user_path(current_user)
+      flash.alert = "Contact modifié avec succès"
+    else
+      render :edit
+    end
   end
 
   private
