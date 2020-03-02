@@ -9,24 +9,21 @@
         <%= image_tag "profile.png", class: 'avatar-large' %>
       <% end %>
     <div class="profil-infos">
-      <p><%= @user.first_name %></p>
-      <p><%= @user.last_name %></p>
+      <p><%= @user.first_name.capitalize %></p>
+      <p><%= @user.last_name.capitalize %></p>
       <p><%= @user.email %></p>
     </div>
   </div>
 </div>
 
 <div class="item-container">
-
   <% if @user.contacts.any? %>
   <div class="info-container">
-    <p><strong><%= @user.contacts.first.first_name %> <%= @user.contacts.first.last_name %></strong> est mon contact d'urgence et son numéro de téléphone est le <strong><%= @user.contacts.first.phone_number %></strong> </p>
+    <p><strong><%= @user.contacts.first.first_name.capitalize %> <%= @user.contacts.first.last_name.capitalize %></strong> est mon contact d'urgence et son numéro de téléphone est le <strong><%= @user.contacts.first.phone_number %></strong> </p>
     <%= link_to "Modifier ce contact", edit_user_contact_path(current_user.contacts.first), class: 's-button' %>
   </div>
   <% else %>
     <p>Pas de contact ajouté!</p>
     <%= link_to "Ajouter un contact", new_user_contact_path(@user), class: 's-button' %>
   <% end %>
-
-
 </div>

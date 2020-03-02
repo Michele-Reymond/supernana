@@ -21,7 +21,7 @@ marie.save
 
 
 files = URI.open('https://cdn.pixabay.com/photo/2017/11/19/07/30/girl-2961959_960_720.jpg')
-sarah = User.new(first_name: 'Sarah', last_name: 'Smith', email: 'sarah@croche.ch', :password => 'topsecret', :password_confirmation => 'topsecret')
+sarah = User.new(first_name: 'Sarah', last_name: 'Croche', email: 'sarah@croche.ch', :password => 'topsecret', :password_confirmation => 'topsecret')
 sarah.photo.attach(io: files, filename: 'sarah.jpg', content_type:'image/jpg')
 sarah.save
 

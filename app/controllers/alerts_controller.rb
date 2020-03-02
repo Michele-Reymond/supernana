@@ -5,7 +5,7 @@ class AlertsController < ApplicationController
 
 
   def index
-    @alerts = Alert.where("started_at::date = ?", Date.today)
+    @alerts = Alert.where("started_at::date = ? AND ended_at IS NULL", Date.today)
     @markers = @alerts.map do |alert|
       {
         lat: alert.latitude,
