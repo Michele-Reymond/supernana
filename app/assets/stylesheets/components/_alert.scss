@@ -1,6 +1,17 @@
 .alert {
   position: fixed;
-  bottom: 16px;
-  right: 16px;
+  top: 0;
+  background-color: white;
   z-index: 1000;
+  font-weight: 700;
+}
+
+.alert-info {
+  border: 2px solid $violet;
+  color: $violet;
+}
+
+.alert-warning {
+  border: 2px solid $rose;
+  color: $rose;
 }
