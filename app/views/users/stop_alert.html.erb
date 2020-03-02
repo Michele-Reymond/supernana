@@ -2,23 +2,27 @@
   <div class="s-container">
 
     <div class="item-container">
-      <div class="stop-button">
-        <%= link_to "Stopper l'alarme", new_user_registration_path %>
+      <div>
+        <%= link_to new_user_registration_path do %>
+          <div id="bm-stop-button"></div>
+        <% end %>
       </div>
     </div>
 
     <div class="item-container">
-      <div class="messages">
-        <i class="fas fa-meteor"></i>
-        <p>Pas de panique...</p>
-      </div>
+      <div class="messages-container">
+        <div class="messages">
+          <i class="fas fa-meteor"></i>
+          <p>Pas de panique...</p>
+        </div>
 
-      <div class="messages">
-        <i class="fas fa-meteor"></i>
-        <div>
-          <p>Pensez-y! Avec un compte utilisateur nous pouvons aussi: </p>
-          <p> - envoyer un message à un contact d'urgence prédéfini </p>
-          <p> - vous géolocaliser auprès de tous les utilisateurs de notre app! </p>
+        <div class="messages">
+          <i class="fas fa-meteor"></i>
+          <div>
+            <p>Pensez-y! Avec un compte utilisateur nous pouvons aussi: </p>
+            <p> - envoyer un message à un contact d'urgence prédéfini </p>
+            <p> - vous géolocaliser auprès de tous les utilisateurs de notre app! </p>
+          </div>
         </div>
       </div>
     </div>
