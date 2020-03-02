@@ -12,6 +12,12 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.mapboxgl-marker {
+  top: -22px !important;
+  background-image: url('../images/marker.svg') !important;
+  background-repeat: no-repeat;
+}
+
 
 #map {
   width: 70vw;
