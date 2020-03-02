@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'chats/create'
-  get 'chats/new'
-  get 'chats/show'
-  get 'chats/index'
   devise_for :users
 
 
@@ -16,8 +12,16 @@ Rails.application.routes.draw do
   get '/resources/documents', to: 'documents#index', as: :documents
   get '/resources/documents/:id', to: 'documents#show', as: :document
   get '/stop_alert', to: 'users#stop_alert'
+  get '/resources/chat_rooms', to: 'chat_rooms#index'
+  get 'resources/chat_rooms/:id', to: 'chat_rooms#show', as: :chat_room
+  post 'resources/chat_rooms/:chat_room_id/chat_messages', to: 'chat_messages#create', as: :chat_room_chat_messages
 
   mount Sidekiq::Web => '/sidekiq'
+  mount ActionCable.server => "/cable"
+
+  # resources :chat_rooms, only: [:show] do
+  #   resources :chat_messages, only: [:create]
+  # end
 
 
   resources :alerts, only: [:index, :create, :update, :show]
