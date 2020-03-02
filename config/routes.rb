@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   post 'resources/chat_rooms/:chat_room_id/chat_messages', to: 'chat_messages#create', as: :chat_room_chat_messages
 
   mount Sidekiq::Web => '/sidekiq'
+  mount ActionCable.server => "/cable"
 
   # resources :chat_rooms, only: [:show] do
   #   resources :chat_messages, only: [:create]
