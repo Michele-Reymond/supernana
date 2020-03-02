@@ -15,6 +15,15 @@ const animation = () => {
         autoplay: true,
         animationData: animationData // the path to the animation json
       });
+
+    loader.addEventListener("mouseenter", function () {
+      animationTest.goToAndStop(0, true);
+    });
+
+    loader.addEventListener("mouseleave", function () {
+      animationTest.play();
+    });
+
   }
 }
 
