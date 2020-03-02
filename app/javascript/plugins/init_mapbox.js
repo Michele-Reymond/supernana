@@ -21,13 +21,13 @@ const initMapbox = () => {
 
       map.addControl(directions);
 
-      let geolocate = new mapboxgl.GeolocateControl({
-        positionOptions: {
-        enableHighAccuracy: true
-        },
-        trackUserLocation: true })
+      // let geolocate = new mapboxgl.GeolocateControl({
+      //   positionOptions: {
+      //   enableHighAccuracy: true
+      //   },
+      //   trackUserLocation: true })
 
-      map.addControl(geolocate);
+      // map.addControl(geolocate);
 
       const markers = JSON.parse(mapElement.dataset.markers);
       markers.forEach((marker) => {
