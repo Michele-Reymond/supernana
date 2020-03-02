@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
+Document.destroy_all
+ChatRoom.destroy_all
 
 
 puts 'Creating users...'
@@ -44,16 +46,16 @@ puts 'Finished creating contacts!'
 
 puts 'Creating alerts...'
 
-alert1 = Alert.new(started_at: "25/02/2020 10:00", user_id: marie.id)
+alert1 = Alert.new(started_at: "02/03/2020 10:00", user_id: marie.id)
 alert1.save
 
-alert2 = Alert.new(started_at: "25/02/2020 12:00", user_id: marie.id)
+alert2 = Alert.new(started_at: "02/03/2020 12:00", user_id: marie.id)
 alert2.save
 
-alert3 = Alert.new(started_at: "25/02/2020 15:00", user_id: sarah.id)
+alert3 = Alert.new(started_at: "02/03/2020 15:00", user_id: sarah.id)
 alert3.save
 
-alert4 = Alert.new(started_at: "25/02/2020 17:00", user_id: julie.id)
+alert4 = Alert.new(started_at: "02/03/2020 17:00", user_id: julie.id)
 alert4.save
 
 
@@ -82,3 +84,37 @@ survivre et à retrouver le sourire." , author: "Mélissa A.", url: "https://www
 doc2.save
 
 puts 'Finished creating documents!'
+
+puts 'Creating a chat...'
+
+chat1 = ChatRoom.new(name: 'Général')
+chat1.save
+
+chat2 = ChatRoom.new(name: 'Témoignages')
+chat2.save
+
+chat3 = ChatRoom.new(name: 'Actualités')
+chat3.save
+
+chat4 = ChatRoom.new(name: 'Violence à la maison, quelles solutions?')
+chat4.save
+
+chat5 = ChatRoom.new(name: 'Harcèlement au travail, quels sont mes droits?')
+chat5.save
+
+chat6 = ChatRoom.new(name: "Le féminisme pour vous, c'est quoi?")
+chat6.save
+
+chat7 = ChatRoom.new(name: 'Comment se reconstruire après un viol?')
+chat7.save
+
+chat8 = ChatRoom.new(name: "Victime, d'une agression de rue, j'aimerais reprendre possession de mon corps")
+chat8.save
+
+chat9 = ChatRoom.new(name: "Je n'aime pas mon corps")
+chat9.save
+
+chat10 = ChatRoom.new(name: "Suis-je vicitme d'harcèlement verbal?")
+chat10.save
+
+puts 'Finished creating the chat!'

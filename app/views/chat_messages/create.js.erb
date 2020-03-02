@@ -1,0 +1,21 @@
+function insertMessage(chat_message) {
+  const messageVide = document.querySelector('.message-vide');
+
+  if (messageVide) {
+    messageVide.parentNode.removeChild(messageVide);
+  }
+
+  const messagesContainer = document.querySelector('.messages');
+  messagesContainer.insertAdjacentHTML('beforeend', chat_message);
+  const input = document.querySelector('#chat_message_content');
+  input.value = '';
+  input.blur();
+  scrollLastMessageIntoView();
+}
+
+
+<% if @chat_message.errors.any? %>
+  ////
+<% else %>
+  insertMessage('<%= j render "message", chat_message: @chat_message, user_is_messages_author: true %>');
+<% end %>

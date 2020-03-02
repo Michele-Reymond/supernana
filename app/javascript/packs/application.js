@@ -6,7 +6,6 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
 import { addIndicatif } from '../components/phonenumber';
 
-
 openNav();
 closeNav();
 initMapbox();
