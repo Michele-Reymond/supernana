@@ -11,7 +11,7 @@ class SendMessageJob < ApplicationJob
       client.sms.send(
         from: "Supernana",
         to: number,
-        text: "Bonjour #{contact} , #{user} est en danger"
+        text: "Bonjour #{contact} , #{user} est en danger, allez lui porter secours à l'adresse suivante: https://www.google.com/maps/search/?api=1&query=#{alert.latitude},#{alert.longitude} "
       )
   end
 end
