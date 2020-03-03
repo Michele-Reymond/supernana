@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
+  config.action_mailer.default_url_options = { host: "http://www.supernana.ch" }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -10,8 +10,8 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
-  config.action_cable.url = "ws://www.supernana.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = [ "http://www.supernana.herokuapp.com", "https://www.supernana.herokuapp.com" ]
+  config.action_cable.url = "ws://www.supernana.ch/cable"
+  config.action_cable.allowed_request_origins = [ "http://www.supernana.ch", "https://www.supernana.ch" ]
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
