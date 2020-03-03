@@ -1,0 +1,22 @@
+  <div class="green-bg">
+    <div class= "s-container">
+        <div class="item-container">
+          <h1>Contacts utiles</h1>
+        </div>
+    </div>
+  </div>
+
+  <div class= "s-container">
+      <% @informations.each do |information| %>
+        <div class="doc-container">
+          <h3><%= information.title %></h3>
+          <p><%= information.description %></p>
+          <a href="tel:<%= information.phone_number %>"><%= information.phone_number %></a>
+          <a href="mailto:<%= information.email %>"><%= information.email %></a>
+          <a href="<%= information.website %>"><%= information.website %></a>
+          <p><%= information.location %></p>
+        </div>
+      <% end %>
+
+      <%#= link_to 'retour', resources_path %>
+</div>

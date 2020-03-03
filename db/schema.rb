@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_02_085558) do
+ActiveRecord::Schema.define(version: 2020_03_03_170122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,13 @@ ActiveRecord::Schema.define(version: 2020_03_02_085558) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "chats", force: :cascade do |t|
+    t.text "message"
+    t.string "username"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "contacts", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -81,6 +88,17 @@ ActiveRecord::Schema.define(version: 2020_03_02_085558) do
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "information", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "phone_number"
+    t.string "email"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "website"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -126,4 +144,6 @@ ActiveRecord::Schema.define(version: 2020_03_02_085558) do
   add_foreign_key "chat_messages", "users"
   add_foreign_key "contacts", "users"
   add_foreign_key "messages", "alerts"
+  add_foreign_key "room_messages", "rooms"
+  add_foreign_key "room_messages", "users"
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'informations/index'
   devise_for :users
 
 
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
   get '/stop', to: 'pages#stop'
   get '/resources', to: 'pages#resources'
   get '/resources/documents', to: 'documents#index', as: :documents
+  get '/resources/contacts', to: 'informations#index', as: :informations
   get '/resources/documents/:id', to: 'documents#show', as: :document
   get '/stop_alert', to: 'users#stop_alert'
   get '/resources/chat_rooms', to: 'chat_rooms#index'
