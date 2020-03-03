@@ -15,23 +15,16 @@ const initMapbox = () => {
       const directions = new MapboxDirections({
         accessToken:  mapboxgl.accessToken,
         unit: 'metric',
-        profile: 'mapbox/walking',
+        profile: 'mapbox/driving',
         controls: {inputs: false, instructions: false}
       });
 
       map.addControl(directions);
 
-      // let geolocate = new mapboxgl.GeolocateControl({
-      //   positionOptions: {
-      //   enableHighAccuracy: true
-      //   },
-      //   trackUserLocation: true })
-
-      // map.addControl(geolocate);
-
       const markers = JSON.parse(mapElement.dataset.markers);
       markers.forEach((marker) => {
-        const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
+        const popup = new mapboxgl.Popup();
+
 
         const element = document.createElement('div');
         element.className = 'marker';
@@ -40,18 +33,21 @@ const initMapbox = () => {
         element.style.width = '65px';
         element.style.height = '65px';
 
-        new mapboxgl.Marker(element)
-          .setLngLat([marker.lng, marker.lat])
-          .setPopup(popup)
-          .addTo(map);
-
         element.addEventListener('click', function(e){
           e.stopPropagation();
           directions.setOrigin([position.coords.longitude, position.coords.latitude])
           directions.setDestination([marker.lng, marker.lat])
+          popup
+            .setLngLat([marker.lng, marker.lat])
+            .setHTML(marker.infoWindow)
+            .addTo(map)
         });
 
+        new mapboxgl.Marker(element)
+          .setLngLat([marker.lng, marker.lat])
+          .addTo(map);
       });
+
       fitMapToMarkers(map, markers);
     })
   }
@@ -61,21 +57,6 @@ const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
   markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
   map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
-};
-
-const addMarkersToMap = (map, markers) => {
-  markers.forEach((marker) => {
-    const popup = new mapboxgl.Popup().setHTML(marker.infoWindow); // add this
-
-    new mapboxgl.Marker()
-      .setLngLat([ marker.lng, marker.lat ])
-      .setPopup(popup) // add this
-      .addTo(map);
-  });
-};
-
-const succesPosition = (pos) => {
-  return [pos.coords.longitude, pos.coords.latitude]
 };
 
 export { initMapbox };
