@@ -9,7 +9,7 @@
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
         <ul class="menu">
-          <%= link_to resources_chat_rooms_path do %>
+          <%= link_to resources_path do %>
             <p><i class="fas fa-arrow-right m-2"></i>Retour aux infos</p>
           <% end %>
           <% @chat_rooms.each do |chat_room| %>
