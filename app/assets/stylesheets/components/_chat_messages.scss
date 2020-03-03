@@ -1,14 +1,14 @@
 .messages {
   font-size: 14px;
-  color: #868686;
+  color: $violet;
   background-color: #ffffff;
   padding: 20px;
-  border: 1px solid #ececec;
+  border: 3px solid $violet;
   border-top: none;
   border-bottom-width: 0;
-  max-height: calc(100vh - 70px - 45px - 61px - 30px);
   overflow: scroll;
   display: block;
+  height: 70vh;
 }
 
 .message {
@@ -17,16 +17,35 @@
   &.right {
     flex-direction: row-reverse;
     .message-content {
-      background-color: #F2F9FC;
+      background-color: $vert;
     }
   }
 }
 .message-content {
   background-color: #F7F7F7;
-  border-radius: 3px;
+  border-radius: 10px;
   margin: 0 10px;
-  padding: 11px 10px 8px 10px;
+  padding: 10px 30px 10px 15px;
 }
+
+#create-message .new_chat_message {
+  display: flex;
+  flex-direction: row;
+}
+
+#create-message .new_chat_message .s-button {
+  margin: 0 0 15px 0;
+}
+
+#create-message .new_chat_message .chat_message_content {
+  flex-grow: 1;
+}
+
+.message-content p {
+  margin-bottom: 0;
+}
+
+
 .avatar {
   width: 42px;
   height: 42px;
@@ -34,10 +53,7 @@
 }
 
 #create-message {
-  padding: 10px;
-  background-color: #ffffff;
   margin-bottom: 20px;
-  border: 1px solid #ececec;
 }
 .message_content {
   margin-bottom: 0;
