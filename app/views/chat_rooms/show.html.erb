@@ -1,6 +1,17 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
+      <h1>Bienvenue sur la communauté Supernana !</h1>
+      <p class="text-center">Rejoignez une chatroom et exprimez-vous !</p>
+
+      <div class= "s-container">
+        <% @chat_rooms.each do |chat_room| %>
+          <%= link_to chat_room_path(chat_room) do %>
+            <p><%= chat_room.name %></p>
+          <% end %>
+        <% end %>
+      </div>
+
       <div class="chat-header"><h4>#<%= @chat_room.name %></h4></div>
       <div class="messages">
 

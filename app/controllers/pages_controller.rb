@@ -10,4 +10,7 @@ class PagesController < ApplicationController
     @contact = current_user.contacts.first
   end
 
+  def resources
+    @chat_rooms = ChatRoom.all
+  end
 end
