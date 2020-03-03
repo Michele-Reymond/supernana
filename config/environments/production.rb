@@ -10,7 +10,7 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
-  config.action_cable.url = "wss://www.supernana.herokuapp.com/cable"
+  config.action_cable.url = "ws://www.supernana.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = [ "http://www.supernana.herokuapp.com", "https://www.supernana.herokuapp.com" ]
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
