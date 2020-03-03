@@ -1,4 +1,4 @@
-.messages {
+.alert-messages {
   display: flex !important;
   padding: 10px !important;
   align-items: center;
@@ -7,17 +7,17 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.messages p {
+.alert-messages p {
   margin-bottom: 0;
 }
 
-.messages i {
+.alert-messages i {
   font-size: 2em;
   color: $vert;
   padding: 5px;
   margin-right: 20px;
 }
 
-.messages-container {
+.alert-messages-container {
   margin-top: -50px;
 }
