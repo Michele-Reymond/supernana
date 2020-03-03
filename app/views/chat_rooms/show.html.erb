@@ -4,12 +4,20 @@
       <h1>Bienvenue sur la communauté Supernana !</h1>
       <p class="text-center">Rejoignez une chatroom et exprimez-vous !</p>
 
-      <div class= "s-container">
-        <% @chat_rooms.each do |chat_room| %>
-          <%= link_to chat_room_path(chat_room) do %>
-            <p><%= chat_room.name %></p>
+      <div class= "chat-menu">
+        <p><% @chat_room.name %></p>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+          <%= link_to resources_chat_rooms_path do %>
+            <p><i class="fas fa-arrow-right m-2"></i>Retour aux infos</p>
           <% end %>
-        <% end %>
+          <% @chat_rooms.each do |chat_room| %>
+            <%= link_to chat_room_path(chat_room) do %>
+              <li><%= chat_room.name %></li>
+            <% end %>
+          <% end %>
+        </ul>
       </div>
 
       <div class="chat-header"><h4>#<%= @chat_room.name %></h4></div>
@@ -30,9 +38,7 @@
         <%= simple_form_for [ @chat_room, ChatMessage.new ], remote: true, html: {autocomplete: "off" } do |f| %>
           <%= f.input :content, label: false, placeholder: "Écrivez votre message ici..." %>
           <%= f.button :submit, 'Envoyer le message', class: 's-button' %>
-          <%= link_to resources_chat_rooms_path do %>
-            <p><i class="fas fa-arrow-right m-2"></i>Retour aux chat rooms</p>
-          <% end %>
+
         <% end %>
       </div>
     </div>

@@ -1,0 +1,106 @@
+.chat-menu {
+  background-color: $rose;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  width: 100%;
+  z-index: 3;
+}
+
+
+.chat-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: white;
+}
+
+.chat-menu a {
+  display: block;
+  padding: 10px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+  color: $violet;
+  border-bottom: 3px solid $rose;
+}
+
+.chat-menu a:hover,
+.chat-menu .menu-btn:hover {
+  background-color: $vert;
+}
+
+/* menu */
+
+.chat-menu .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.chat-menu .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  margin-top: 5px;
+  padding: 20px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.chat-menu .menu-icon .navicon {
+  background: $violet;
+  display: block;
+  height: 2px;
+  position: relative;
+  right: 20px;
+  transition: background .2s ease-out;
+  width: 20px;
+}
+
+.chat-menu .menu-icon .navicon:before,
+.chat-menu .menu-icon .navicon:after {
+  background: $violet;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.chat-menu .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.chat-menu .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.chat-menu .menu-btn {
+  display: none;
+}
+
+.chat-menu .menu-btn:checked ~ .menu {
+  max-height: 500px;
+}
+
+.chat-menu .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.chat-menu .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.chat-menu .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.chat-menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.chat-menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
