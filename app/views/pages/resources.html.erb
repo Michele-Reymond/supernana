@@ -1,14 +1,14 @@
 <div class="resources">
 
   <div class="resources-container">
-    <%= link_to resources_chat_rooms_path do %>
+    <%= link_to chat_room_path(@chat_rooms.first.id) do %>
       <h3>Communauté</h3>
       <p>Discuter et parler librement de vos expériences avec le chat Supernana.</p>
     <% end %>
   </div>
 
   <div class="resources-container">
-    <%= link_to resources_path do %>
+    <%= link_to documents_path do %>
       <h3>Documentation</h3>
       <p>Parce qu'être informée, c'est agir mieux et trouvez les bonnes solutions. Retrouvez ici des statistiques, articles; etc...</p>
     <% end %>

@@ -13,20 +13,23 @@
       <div class="messages-container">
 
         <div class="messages">
-          <i class="fas fa-meteor"></i>
+          <i class="fab fa-pagelines"></i>
           <p>Pas de panique...</p>
         </div>
 
       <% unless current_user.contacts.first == nil %>
         <div class="messages">
-          <i class="fas fa-meteor"></i>
-            <p>Nous avons envoyé un message à <%= @contact.first_name %></p>
+          <i class="fab fa-telegram-plane"></i>
+          <p>Nous avons envoyé un message à <strong><%= @contact.first_name %></strong></p>
         </div>
       <% end %>
 
         <div class="messages">
-          <i class="fas fa-meteor"></i>
-          <p>Vous êtes géolocalisée près de <%= @alert.address %></p>
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <p>Votre géolocalisation:</p>
+            <p><%= @alert.address %></p>
+          </div>
         </div>
 
       </div>
@@ -34,4 +37,4 @@
 
     <%= audio_tag "alarm.wav", autoplay: true %>
   </div>
-</div>>
+</div>

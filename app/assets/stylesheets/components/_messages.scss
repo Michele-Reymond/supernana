@@ -1,6 +1,6 @@
 .messages {
-  display: flex;
-  padding: 10px;
+  display: flex !important;
+  padding: 10px !important;
   align-items: center;
   width: 100%;
   margin: 10px 0;
@@ -14,7 +14,7 @@
 .messages i {
   font-size: 2em;
   color: $vert;
-  padding: 10px;
+  padding: 5px;
   margin-right: 20px;
 }
 
