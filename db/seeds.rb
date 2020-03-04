@@ -19,13 +19,13 @@ puts 'Creating users...'
 
 filen = URI.open('https://zupimages.net/up/20/10/zsen.jpeg')
 nicoleta = User.new(first_name: 'Nicoleta', last_name:'Dudau', email: 'nicoleta@dudau.ch', :password => 'topsecret', :password_confirmation => 'topsecret')
-nicoleta.photo.attach(io: filen, filename: 'nicoleta.jpg', content_type:'image/jpeg')
+nicoleta.photo.attach(io: filen, filename: 'nicoleta.jpeg', content_type:'image/jpeg')
 nicoleta.save
 
 
 filel = URI.open('https://zupimages.net/up/20/10/bh8w.jpeg')
 lea = User.new(first_name: 'Léa', last_name: 'Medrano', email: 'lea@medrano.ch', :password => 'topsecret', :password_confirmation => 'topsecret')
-lea.photo.attach(io: filel, filename: 'lea.jpg', content_type:'image/jpeg')
+lea.photo.attach(io: filel, filename: 'lea.jpeg', content_type:'image/jpeg')
 lea.save
 
 filem = URI.open('https://cdn.pixabay.com/photo/2015/09/02/13/24/girl-919048_960_720.jpg')
@@ -39,28 +39,22 @@ puts 'Creating contacts...'
 
 
 nicoleta = Contact.new(first_name: 'Nicoleta', last_name: 'Dudau', phone_number: '+41763239592', user_id: lea.id)
-nicoleta.save
+nicoleta.save!
 
-michele = Contact.new(first_name: 'Michèle', last_name: 'Reymond', phone_number: '+41787372019 ', user_id: michele.id)
-michele.save
-
-hugo = Contact.new(first_name: 'Hugo', last_name: 'Mori', phone_number: '+33786616610', user_id: michele.id)
-hugo.save
-
-arthur = Contact.new(first_name: 'Arthur', last_name: 'Messean', phone_number: '+33666756141', user_id: michele.id)
-arthur.save
+michele2 = Contact.new(first_name: 'Michèle', last_name: 'Reymond', phone_number: '+41787372019', user_id: michele.id)
+michele2.save!
 
 marielle = Contact.new(first_name: 'Marielle', last_name: 'Gueissaz', phone_number: '+41783450520', user_id: michele.id)
-marielle.save
+marielle.save!
 
 lauriane = Contact.new(first_name: 'Lauriane', last_name: 'Bonnet', phone_number: '+41795810061', user_id: michele.id)
-lauriane.save
+lauriane.save!
 
 emilie = Contact.new(first_name: 'Emilie', last_name: 'Keller', phone_number: '+41788232165', user_id: michele.id)
-emilie.save
+emilie.save!
 
 georgina = Contact.new(first_name: 'Georgina', last_name: 'Noten', phone_number: '+41795721678', user_id: michele.id)
-georgina.save
+georgina.save!
 
 puts 'Finished creating contacts!'
 
