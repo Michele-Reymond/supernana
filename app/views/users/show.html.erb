@@ -17,13 +17,18 @@
 </div>
 
 <div class="item-container">
-  <% if @user.contacts.any? %>
   <div class="info-container">
-    <p><strong><%= @user.contacts.first.first_name.capitalize %> <%= @user.contacts.first.last_name.capitalize %></strong> est mon contact d'urgence et son numéro de téléphone est le <strong><%= @user.contacts.first.phone_number %></strong> </p>
+    <h4>Contacts d'urgence:</h4>
+    <% if @user.contacts.any? %>
+      <ul>
+        <% @contacts.each do |contact| %>
+          <li><strong><%= contact.first_name.capitalize %> <%= contact.last_name.capitalize %></strong> <%= contact.phone_number %></li>
+        <% end %>
+      </ul>
     <%= link_to "Modifier ce contact", edit_user_contact_path(current_user.contacts.first), class: 's-button' %>
+    <% else %>
+      <p>Pas de contact ajouté!</p>
+    <% end %>
   </div>
-  <% else %>
-    <p>Pas de contact ajouté!</p>
-    <%= link_to "Ajouter un contact", new_user_contact_path(@user), class: 's-button' %>
-  <% end %>
+  <%= link_to "Ajouter un contact", new_user_contact_path(@user), class: 's-button' %>
 </div>
