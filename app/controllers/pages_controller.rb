@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 
   def stop
     @alert = current_user.alerts.last
-    @contact = current_user.contacts.first
+    @contacts = current_user.contacts
   end
 
   def resources

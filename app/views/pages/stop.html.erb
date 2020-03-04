@@ -20,7 +20,12 @@
       <% unless current_user.contacts.first == nil %>
         <div class="alert-messages">
           <i class="fab fa-telegram-plane"></i>
-          <p>Nous avons envoyé un message à <strong><%= @contact.first_name %></strong></p>
+          <p>
+            Nous avons envoyé un message à
+            <% @contacts.each do |contact| %>
+              <strong><%= contact.first_name %></strong>
+            <% end %>
+          </p>
         </div>
       <% end %>
 
