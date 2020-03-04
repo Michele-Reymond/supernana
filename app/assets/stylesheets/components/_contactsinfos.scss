@@ -1,0 +1,32 @@
+.contact-infos-container {
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid $vert;
+  padding: 10px 0;
+}
+
+.contacts-links {
+  color: $rose;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.contacts-links a{
+  color: $rose;
+}
+
+.contacts-links-infos {
+  display: flex;
+  padding: 5px 10px;
+}
+
+.contacts-links a:hover {
+  color: $vert;
+}
+
+.contacts-links i{
+  margin-right: 20px;
+
+}
+
