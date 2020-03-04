@@ -1,22 +1,38 @@
-  <div class="green-bg">
-    <div class= "s-container">
-        <div class="item-container">
-          <h1>Contacts utiles</h1>
+<div class="green-bg">
+  <div class="s-container">
+      <div class="item-container">
+        <h1>Contacts utiles</h1>
+      </div>
+  </div>
+</div>
+
+<div class="s-container">
+    <% @informations.each do |information| %>
+    <div class="contact-infos-container">
+        <h3><%= information.title %></h3>
+        <p><%= information.description %></p>
+        <div class="contacts-links">
+          <div class="contacts-links-infos">
+            <i class="fas fa-phone"></i>
+            <a href="tel:<%= information.phone_number %>"><%= information.phone_number %></a>
+          </div>
+
+          <div class="contacts-links-infos">
+            <i class="fas fa-envelope-open-text"></i>
+            <a href="mailto:<%= information.email %>"><%= information.email %></a>
+          </div>
+
+          <div class="contacts-links-infos">
+            <i class="fas fa-link"></i>
+            <a href="<%= information.website %>"><%= information.website %></a>
+          </div>
+
+          <div class="contacts-links-infos">
+            <i class="fas fa-map-marker-alt"></i>
+            <p><%= information.location %></p>
+          </div>
+
         </div>
     </div>
-  </div>
-
-  <div class= "s-container">
-      <% @informations.each do |information| %>
-        <div class="doc-container">
-          <h3><%= information.title %></h3>
-          <p><%= information.description %></p>
-          <a href="tel:<%= information.phone_number %>"><%= information.phone_number %></a>
-          <a href="mailto:<%= information.email %>"><%= information.email %></a>
-          <a href="<%= information.website %>"><%= information.website %></a>
-          <p><%= information.location %></p>
-        </div>
-      <% end %>
-
-      <%#= link_to 'retour', resources_path %>
+    <% end %>
 </div>
