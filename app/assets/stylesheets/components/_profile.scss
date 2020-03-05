@@ -1,7 +1,8 @@
 .profil-infos {
   margin-top: 35px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;letter-spacing: 1px;
+  line-height: 3em;
 }
 
 .profil-infos p {
@@ -9,18 +10,21 @@
   font-family: $s-font;
   color: $violet;
   text-align: center;
+
 }
 
 
 .profil-infos p:nth-child(-n+2) {
   font-size: $s-font-size-big;
+  letter-spacing: 1px;
   font-weight: $s-font-weight-b;
   margin-top: -15px;
 }
 
 .settings {
   margin-top: 18px;
-  font-size: 1.2em;
+  font-size: 1.4em;
+  letter-spacing: 1px;
   color: $rose;
   text-align: center;
   background-color: white;

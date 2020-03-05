@@ -6,9 +6,8 @@
   <% end %>
 
   <div class="message-content">
-    <div><p><strong><%= chat_message.user.first_name %> <%= chat_message.user.last_name %></strong> </p></div>
+  <div class="inline-list"><p><strong><%= chat_message.user.first_name %> <%= chat_message.user.last_name %></strong></p><p class="chat-date"><%= chat_message.created_at.strftime("%d.%m.%Y %H:%M") %></p></div>
     <p><%= chat_message.content %></p>
-    <p><%= chat_message.created_at.strftime("%d.%m.%y  %H:%M") %></p>
   </div>
 </div>
 

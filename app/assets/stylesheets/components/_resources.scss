@@ -20,6 +20,13 @@
 .resources-text:hover {
   height: 250px;
   transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  line-height: 150%;
+  font-size: 18px;
 }
 
 .card-chat {
