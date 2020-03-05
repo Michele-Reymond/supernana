@@ -1,12 +1,8 @@
-  <div class="green-bg">
-    <div class= "s-container">
-        <div class="item-container">
-          <h1>Tous les documents</h1>
-        </div>
-    </div>
-  </div>
+<div class="fix-background illustration-docs"></div>
 
+<div class="white-background">
   <div class= "s-container">
+    <h1 class="info-title">Docs</h1>
       <% @documents.each do |document| %>
         <div class="doc-container">
           <h3><%= document.title %></h3>
@@ -17,6 +13,5 @@
           <% end %>
         </div>
       <% end %>
-
-      <%#= link_to 'retour', resources_path %>
+  </div>
 </div>
