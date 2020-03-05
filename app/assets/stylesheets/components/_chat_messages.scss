@@ -1,5 +1,6 @@
 .messages {
-  font-size: 14px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
   color: $violet;
   background-color: #ffffff;
   padding: 20px;
@@ -25,7 +26,7 @@
   background-color: #F7F7F7;
   border-radius: 10px;
   margin: 0 10px;
-  padding: 10px 30px 10px 15px;
+  padding: 10px 20px 10px 15px;
 }
 
 #create-message .new_chat_message {
@@ -61,7 +62,7 @@
 input.form-control {
   border: 1px solid #ECECEC;
   box-shadow: none;
-  font-size: 14px;
+  font-size: 16px;
   color: #868686;
   &:focus {
     outline: none;
@@ -76,5 +77,19 @@ input.form-control {
   margin-top: 10px;
   h4 {
     margin: 0;
+    letter-spacing: 1px;
+    line-height: 150%;
   }
+}
+
+.chat-date {
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding-left: 30px;
+}
+
+.inline-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
