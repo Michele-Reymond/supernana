@@ -1,13 +1,24 @@
-.resources {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.resources-container {
+  grid-column: span 4;
 }
 
-.resources-container {
-  padding: 0 20%;
-  flex-grow: 0.5;
+.resources-text {
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  height: 200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  transition: 0.5s;
+}
+
+.resources-text:hover {
+  height: 250px;
   transition: 0.5s;
   display: flex;
   flex-direction: column;
@@ -18,23 +29,51 @@
   font-size: 18px;
 }
 
+.card-chat {
+  background-image: url('chat.png');
+  border: 5px solid $violet;
+  margin-top: 30px;
+  color: $violet;
+  i {
+    color: $violet;
+  }
+}
+
+.card-infos {
+  background-image: url('infos.png');
+  border: 5px solid $rose;
+  margin-top: 30px;
+  color: $rose;
+  i {
+    color: $rose;
+  }
+}
+
+.card-agir {
+  background-image: url('agir.png');
+  border: 5px solid $vert;
+  margin-top: 30px;
+  color: $vert;
+  i {
+    color: $vert;
+  }
+}
+
+.resources-text h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: .1em;
+  margin-top: 20px;
+}
+
+
+.resources-text i {
+  font-size: 2.4em;
+}
+
 .resources-container a:hover {
   text-decoration: none;
 }
 
-.resources-container:hover {
-  flex-grow: 1;
-  transition: 0.5s;
-}
 
-.resources-container:nth-child(1) {
-  background-color: $rose;
-}
 
-.resources-container:nth-child(2) {
-  background-color: $vert;
-}
-
-.resources-container:nth-child(3) {
-  background-color: $white;
-}

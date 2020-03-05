@@ -1,0 +1,26 @@
+.fix-background {
+  position: fixed;
+  top: 0;
+  background-color: $vert;
+  background-image: url("sn_illustrations_agir.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 100px;
+  z-index: -1;
+  width: 100%;
+
+}
+
+.white-background {
+  background-color: white;
+  margin-top: 200px;
+}
+
+.info-title {
+  margin-top: -100px;
+  margin-bottom: 50px;
+  color: white;
+  font-size: 5em;
+
+}
