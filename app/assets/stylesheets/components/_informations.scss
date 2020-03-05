@@ -3,14 +3,20 @@
   position: fixed;
   top: 0;
   background-color: $vert;
-  background-image: url("sn_illustrations_agir.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   padding: 100px;
   z-index: -1;
   width: 100%;
+}
 
+.illustration-infos {
+  background-image: url("sn_illustrations_agir.png");
+}
+
+.illustration-docs {
+  background-image: url("sn_illustrations_infos.png");
 }
 
 .white-background {
