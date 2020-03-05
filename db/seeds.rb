@@ -33,6 +33,33 @@ michele = User.new(first_name: 'Michèle', last_name: 'Reymond', email: 'michele
 michele.photo.attach(io: filem, filename: 'michele.jpg', content_type:'image/jpg')
 michele.save
 
+files = URI.open('https://blogs.sjsu.edu/humanities-arts/files/2016/08/Sarah-Jones-Hayes_Music-staff0061-26etwoj.jpg')
+sarah = User.new(first_name: 'Sarah', last_name: 'Smith', email: 'sarah@smith.ch', :password => 'topsecret', :password_confirmation => 'topsecret')
+sarah.photo.attach(io: files, filename: 'sarah.jpg', content_type:'image/jpg')
+sarah.save
+
+filema = URI.open('https://media-exp1.licdn.com/dms/image/C5603AQHRrU7tfrayKA/profile-displayphoto-shrink_200_200/0?e=1587600000&v=beta&t=kTAwrCUVpIrB9Fko_wjTvl9WRUBnk5hggMbQCJJ_QU4')
+marie = User.new(first_name: 'Marie', last_name: 'Dupont', email: 'marie@dupont.ch', :password => 'topsecret', :password_confirmation => 'topsecret')
+marie.photo.attach(io: filema, filename: 'marie.jpg', content_type:'image/jpg')
+marie.save
+
+filet = URI.open('https://media-exp1.licdn.com/dms/image/C5603AQEbeb7NzgzSnw/profile-displayphoto-shrink_200_200/0?e=1586390400&v=beta&t=KOEqs_3Qdhq19knf1zaAPN-h6cy9h0bT2wy_kfxPoP4')
+tina = User.new(first_name: 'Tina', last_name: 'Spark', email: 'tina@spark.ch', :password => 'topsecret', :password_confirmation => 'topsecret')
+tina.photo.attach(io: filet, filename: 'tina.jpg', content_type:'image/jpg')
+tina.save
+
+filee = URI.open('https://avatars3.githubusercontent.com/u/4488722?s=460&v=4')
+emilie = User.new(first_name: 'Emilie', last_name: 'Antoine', email: 'emilie@antoine.ch', :password => 'topsecret', :password_confirmation => 'topsecret')
+emilie.photo.attach(io: filee, filename: 'emilie.jpg', content_type:'image/jpg')
+emilie.save
+
+filev = URI.open('https://1.cdn.edl.io/SUS42WtL8v3xjUXrbw4mnQyH1fLSeID1zNBUTTE00kKG1afV.jpg')
+valerie = User.new(first_name: 'Valérie', last_name: 'Magri', email: 'valerie@magri.ch', :password => 'topsecret', :password_confirmation => 'topsecret')
+valerie.photo.attach(io: filev, filename: 'valerie.jpg', content_type:'image/jpg')
+valerie.save
+
+
+
 puts 'Finished creating users!'
 
 puts 'Creating contacts...'
@@ -130,6 +157,22 @@ chat5.save
 
 
 puts 'Finished creating the chat!'
+
+puts 'Creating chat-messages'
+
+chat_message1 = ChatMessage.create(user_id: sarah.id, chat_room_id: chat2.id, content: 'Hello, quelq\'un par ici?')
+chat_message2 = ChatMessage.create(user_id: marie.id, chat_room_id: chat2.id, content: 'Coucou Sarah, je suis là, as-tu besoin de discuter?')
+chat_message3 = ChatMessage.create(user_id: tina.id, chat_room_id: chat2.id, content: 'Salut Sarah, tout va bien?')
+chat_message4 = ChatMessage.create(user_id: sarah.id, chat_room_id: chat2.id, content: 'Merci les filles, ça me rassure de pouvoir parler avec vous!')
+chat_message5 = ChatMessage.create(user_id: sarah.id, chat_room_id: chat2.id, content: 'Je suis à la recherche d\'un conseil. Un de mes collègues de travail n\'arrête pas de m\'embêter, je ne sais pas trop comment réagir...')
+chat_message6 = ChatMessage.create(user_id: valerie.id, chat_room_id: chat2.id, content: 'Sarah, si t\'es sur Lausanne, on peut se voir pour en discuter quand tu veux.')
+
+
+puts 'Finished creating chat_messages'
+
+
+
+
 
 puts 'Creating informations...'
 
