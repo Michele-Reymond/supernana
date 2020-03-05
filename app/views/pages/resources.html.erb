@@ -1,24 +1,28 @@
-<div class="resources">
+<div class="s-container">
 
   <div class="resources-container">
-    <%= link_to chat_room_path(@chat_rooms.first.id) do %>
-      <h3>Communauté</h3>
-      <p>Discuter et parler librement de vos expériences avec le chat Supernana.</p>
-    <% end %>
-  </div>
 
-  <div class="resources-container">
-    <%= link_to documents_path do %>
-      <h3>Documentation</h3>
-      <p>Parce qu'être informée, c'est agir mieux et trouvez les bonnes solutions. Retrouvez ici des statistiques, articles; etc...</p>
-    <% end %>
-  </div>
+  <%= link_to chat_room_path(@chat_rooms.first.id) do %>
+      <div class="resources-text card-chat">
+        <i class="fas fa-arrow-right"></i>
+        <h3>Chat</h3>
+      </div>
+  <% end %>
 
-  <div class="resources-container">
-    <%= link_to informations_path do %>
-      <h3>Contacts utiles</h3>
-      <p>Vous souhaitez porter plainte, obtenir un suivi psychologique ou peut-être vous investir au sein d'une association? Retrouvez toutes les informations nécessaires pour soutenir et être soutenue!</p>
-    <% end %>
+  <%= link_to documents_path do %>
+      <div class="resources-text card-infos">
+        <i class="fas fa-arrow-right"></i>
+        <h3>S'informer</h3>
+      </div>
+  <% end %>
+
+  <%= link_to informations_path do %>
+      <div class="resources-text card-agir">
+        <i class="fas fa-arrow-right"></i>
+        <h3>Agir</h3>
+      </div>
+  <% end %>
+
   </div>
 </div>
 

@@ -1,5 +1,5 @@
 import lottie from 'lottie-web';
-import animationData from '../../../public/images/datastopb.json';
+import animationData from '../../../public/images/stopbtn.json';
 
 
 const animationStop = () => {
