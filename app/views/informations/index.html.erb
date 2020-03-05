@@ -1,38 +1,36 @@
-<div class="green-bg">
+<div class="fix-background"></div>
+
+<div class="white-background">
   <div class="s-container">
-      <div class="item-container">
-        <h1>Contacts utiles</h1>
+    <h1 class="info-title">Agir</h1>
+
+      <% @informations.each do |information| %>
+      <div class="contact-infos-container">
+          <h3><%= information.title %></h3>
+          <p><%= information.description %></p>
+          <div class="contacts-links">
+            <div class="contacts-links-infos">
+              <i class="fas fa-phone"></i>
+              <a href="tel:<%= information.phone_number %>"><%= information.phone_number %></a>
+            </div>
+
+            <div class="contacts-links-infos">
+              <i class="fas fa-envelope-open-text"></i>
+              <a href="mailto:<%= information.email %>"><%= information.email %></a>
+            </div>
+
+            <div class="contacts-links-infos">
+              <i class="fas fa-link"></i>
+              <a href="<%= information.website %>"><%= information.website %></a>
+            </div>
+
+            <div class="contacts-links-infos">
+              <i class="fas fa-map-marker-alt"></i>
+              <p><%= information.location %></p>
+            </div>
+
+          </div>
       </div>
+      <% end %>
   </div>
-</div>
-
-<div class="s-container">
-    <% @informations.each do |information| %>
-    <div class="contact-infos-container">
-        <h3><%= information.title %></h3>
-        <p><%= information.description %></p>
-        <div class="contacts-links">
-          <div class="contacts-links-infos">
-            <i class="fas fa-phone"></i>
-            <a href="tel:<%= information.phone_number %>"><%= information.phone_number %></a>
-          </div>
-
-          <div class="contacts-links-infos">
-            <i class="fas fa-envelope-open-text"></i>
-            <a href="mailto:<%= information.email %>"><%= information.email %></a>
-          </div>
-
-          <div class="contacts-links-infos">
-            <i class="fas fa-link"></i>
-            <a href="<%= information.website %>"><%= information.website %></a>
-          </div>
-
-          <div class="contacts-links-infos">
-            <i class="fas fa-map-marker-alt"></i>
-            <p><%= information.location %></p>
-          </div>
-
-        </div>
-    </div>
-    <% end %>
 </div>

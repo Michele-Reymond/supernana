@@ -1,5 +1,5 @@
 import lottie from 'lottie-web';
-import animationData from '../../../public/images/dataall.json';
+import animationData from '../../../public/images/alertbtn.json';
 
 
 const animation = () => {
