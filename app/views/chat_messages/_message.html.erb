@@ -1,9 +1,11 @@
 <div class="message <%= user_is_messages_author ? "right" : "" %>">
-  <% if chat_message.user.photo.attached? %>
-    <%= cl_image_tag chat_message.user.photo.key, width: 150, height: 150, gravity: :face, crop: :thumb, :zoom=>1.1, class: 'avatar-chat' %>
-  <% else %>
-    <%= image_tag "profile.png", class: 'avatar' %>
-  <% end %>
+  <div class="avatar-care">
+    <% if chat_message.user.photo.attached? %>
+      <%= cl_image_tag chat_message.user.photo.key, width: 150, height: 150, gravity: :face, crop: :thumb, :zoom=>1.1, class: 'avatar-chat' %>
+    <% else %>
+      <%= image_tag "profile.png", class: 'avatar' %>
+    <% end %>
+  </div>
 
   <div class="message-content">
   <div class="inline-list"><p><strong><%= chat_message.user.first_name %> <%= chat_message.user.last_name %></strong></p><p class="chat-date"><%= chat_message.created_at.strftime("%d.%m.%Y %H:%M") %></p></div>
